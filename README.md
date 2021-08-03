@@ -68,7 +68,8 @@ To set-up deployment-specific `renv` libraries:
 1. 设置抓取网址
         url = "https://www.hermes.com/us/en/category/women/bags-and-small-leather-goods/bags-and-clutches/#||Category"
 2. smtp邮箱设置
-        * `emayili::from("sender@mail.com") %>%` 改为 `emayili::from("打开了API的谷歌邮箱@gmail.com") %>%`
-        * `emayili::to(c("renshangsi@gmail.com")) %>%` 改为 `emayili::to(c("收件人邮箱@gmail.com")) %>%`
-        * `username = "sender@mail.com"` 改为 `username = "上面的发件人邮箱@mail.com"`
-        * `password = "email password"` 改为 ``password = "邮箱密码"`
+        `emayili::from("sender@mail.com") %>%` 改为 `emayili::from("打开了API的谷歌邮箱@gmail.com") %>%` 
+        `emayili::to(c("renshangsi@gmail.com")) %>%` 改为 `emayili::to(c("收件人邮箱@gmail.com")) %>%`
+        
+        c) `username = "sender@mail.com"` 改为 `username = "上面的发件人邮箱@mail.com"`
+        d) `password = "email password"` 改为 ``password = "邮箱密码"`
