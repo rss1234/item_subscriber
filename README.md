@@ -70,6 +70,5 @@ To set-up deployment-specific `renv` libraries:
 2. smtp邮箱设置
         `emayili::from("sender@mail.com") %>%` 改为 `emayili::from("打开了API的谷歌邮箱@gmail.com") %>%`
         `emayili::to(c("renshangsi@gmail.com")) %>%` 改为 `emayili::to(c("收件人邮箱@gmail.com")) %>%`
-        
         `username = "sender@mail.com"` 改为 `username = "上面的发件人邮箱@mail.com"`
-        `password = "email password"` 改为 `password = "邮箱密码"`
+        `password = "email password"` 改为 ``password = "邮箱密码"`
