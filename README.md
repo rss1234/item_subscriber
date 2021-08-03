@@ -26,3 +26,34 @@ To set-up deployment-specific `renv` libraries:
 # 沟通
 
 如有任何建议请大家通过Issues沟通，请各位大佬随意创建PR并tag我为reviewer。请将勿将任何代码merge到main branch，谢谢！
+
+
+
+# 步骤记录 From Windows10
+无R环境  GMAIL-API未开启
+
+## 开启GMAIL-API
+1. 进入Google API Console. Link: https://console.developers.google.com/
+![image](https://user-images.githubusercontent.com/15516632/127945120-61320ef1-0ae6-4a17-9581-316c7f01d6b9.png)
+2. 点击[库]，键入 GMAIL，选择 [GMAIL API]
+![image](https://user-images.githubusercontent.com/15516632/127945252-1c10eb8e-620f-447b-9642-4a15045e1752.png)
+3. 点击[启用]
+![image](https://user-images.githubusercontent.com/15516632/127945340-8943ff6c-f7ae-45fb-9b04-e9436149ab95.png)
+4. 创建凭据 
+        [范围]处无需选择，直接跳过
+        [凭据]无需下载，直接完成
+![image](https://user-images.githubusercontent.com/15516632/127945451-e89d1c64-4fab-4bd0-8228-878605ecdf1e.png)
+![image](https://user-images.githubusercontent.com/15516632/127945479-7c159e99-c05d-469f-b0c1-1d67f6b4adef.png)
+![image](https://user-images.githubusercontent.com/15516632/127945545-5fb11a32-2110-4860-82f7-d17a49074ded.png)
+![image](https://user-images.githubusercontent.com/15516632/127945651-6ce3ab36-82a1-4510-8441-42ee68c0890d.png)
+5. 开启"安全性较低的应用的访问权限"   Link: https://myaccount.google.com/lesssecureapps
+
+## R环境配置
+1. 下载R, 由于R要求版本为4.0.5.目前最新版本为4.1.0.故需找到R4.0.5版本文件. Link: https://cran.r-project.org/bin/windows/base/old/4.0.5/
+2. WIN+R,打开cmd,键入 `cd C:\Users\Username\Desktop\HERMES\完整文档\item_subscriber` , 进入对应目录下。
+   键入 `R`，进入R环境。
+3. 键入 `renv::init(project = "fancy_app/")` 安装`renv`包
+4. 键入 `install.packages(c("rvest", "Rcrawler", "emayili")`一次性安装所需包
+   或依次键入 `library(rvest)`   `library(Rcrawler)`   `library(emayili)` 分开安装
+5. 键入 `source("hermes_web_crawler.R")` 即开始运行脚本
+![image](https://user-images.githubusercontent.com/15516632/127946046-006ed5ee-b902-4efd-b5f8-3d0792d15803.png)
