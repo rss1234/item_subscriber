@@ -27,10 +27,12 @@ To set-up deployment-specific `renv` libraries:
 
 如有任何建议请大家通过Issues沟通，请各位大佬随意创建PR并tag我为reviewer。请将勿将任何代码merge到main branch，谢谢！
 
-
+#
+#
 
 # 步骤记录 From Windows10
-无R环境  GMAIL-API未开启
+##### 无R环境  GMAIL-API未开启
+##### ！先开启GMAIL-API，再改代码，最后运行配置R环境并运行脚本！
 
 ## 开启GMAIL-API
 1. 进入Google API Console. Link: https://console.developers.google.com/
@@ -57,3 +59,17 @@ To set-up deployment-specific `renv` libraries:
    或依次键入 `library(rvest)`   `library(Rcrawler)`   `library(emayili)` 分开安装
 5. 键入 `source("hermes_web_crawler.R")` 即开始运行脚本
 ![image](https://user-images.githubusercontent.com/15516632/127946046-006ed5ee-b902-4efd-b5f8-3d0792d15803.png)
+
+##
+## 代码更改
+### find_bag_utils.R
+`picotin <- "https://www.hermes.com/us/en/product/picotin-lock"` 可将`picotin-lock`改为其他关键字，从而锁定其它包包
+### hermes_web_crawler.R
+1. 设置抓取网址
+        url = "https://www.hermes.com/us/en/category/women/bags-and-small-leather-goods/bags-and-clutches/#||Category"
+2. smtp邮箱设置
+        `emayili::from("sender@mail.com") %>%` 改为 `emayili::from("打开了API的谷歌邮箱@gmail.com") %>%`
+        `emayili::to(c("renshangsi@gmail.com")) %>%` 改为 `emayili::to(c("收件人邮箱@gmail.com")) %>%`
+        
+        `username = "sender@mail.com"` 改为 `username = "上面的发件人邮箱@mail.com"`
+        `password = "email password"` 改为 `password = "邮箱密码"`
